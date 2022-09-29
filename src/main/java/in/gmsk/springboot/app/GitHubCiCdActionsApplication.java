@@ -13,6 +13,11 @@ public class GitHubCiCdActionsApplication {
 	public String showWelcome() {
 		return "Hello World Docker...! by GMSK";
 	}
+	
+	@RequestMapping("/test")
+	public String showHey() {
+		return "Hello World Docker with 2nd week...! by GMSK :-) ";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(GitHubCiCdActionsApplication.class, args);
