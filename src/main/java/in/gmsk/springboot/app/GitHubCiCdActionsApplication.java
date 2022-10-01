@@ -10,21 +10,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
+@RestController("/")
 public class GitHubCiCdActionsApplication {
 	
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	public String showWelcome() {
 		return "Hello World Docker...! by GMSK";
 	}
 	
-	@RequestMapping("/test")
+	@RequestMapping("/index/home")
+	public String chgFunction() {
+		return showHey();
+	}
+	
 	public String showHey() {
 		return "Hello World Docker with 2nd week...! by GMSK :-) ";
 	}
 	
-	
-	@RequestMapping("/{name}")
+	@RequestMapping("/home/{name}")
 	public List<String> getFriends(@PathVariable ("name") String name){
 		
 		List<String> friend=new ArrayList<>();
@@ -37,7 +40,7 @@ public class GitHubCiCdActionsApplication {
 		
 		return friend;
 	}
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(GitHubCiCdActionsApplication.class, args);
 	}
