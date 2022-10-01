@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/")
 public class GitHubCiCdActionsApplication {
 	
-	@RequestMapping("/index")
+	@RequestMapping
 	public String showWelcome() {
 		return "Hello World Docker...! by GMSK";
 	}
 	
-	@RequestMapping("/index/home")
+	@RequestMapping("/index")
 	public String chgFunction() {
 		return showHey();
 	}
@@ -27,7 +27,7 @@ public class GitHubCiCdActionsApplication {
 		return "Hello World Docker with 2nd week...! by GMSK :-) ";
 	}
 	
-	@RequestMapping("/home/{name}")
+	@RequestMapping("/{name}")
 	public List<String> getFriends(@PathVariable ("name") String name){
 		
 		List<String> friend=new ArrayList<>();
