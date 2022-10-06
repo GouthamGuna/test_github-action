@@ -31,6 +31,7 @@ public class HomeController {
 		friend.add(new Friends("r", "Dhinesh"));
 		friend.add(new Friends("a", "abudal"));
 		friend.add(new Friends("m", "fahad"));
+		friend.add(new Friends("computer", "ASUS"));
 		
 		return friend;
 	}
