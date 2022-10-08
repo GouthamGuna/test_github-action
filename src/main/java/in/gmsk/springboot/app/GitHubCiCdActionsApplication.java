@@ -15,7 +15,7 @@ public class GitHubCiCdActionsApplication {
 		SpringApplication.run(GitHubCiCdActionsApplication.class, args);
 	}
 	
-	@Scheduled(fixedDelay = 5000)
+	@Scheduled(fixedDelay = 50000)
 	public void getStatus() {
 		System.out.println("Application Running Status : " + new Date());
 	}
