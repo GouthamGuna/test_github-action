@@ -10,16 +10,10 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "friends_details")
-public class Friends {
-	
+@Table(name="friend_type")
+public class FriendsType {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String firstName;
-	private String lastName;
-	private String mobileno;
-	private String mailId;
-	private String dob;
-	private String photo;
+	private String friendtypes;
 }
